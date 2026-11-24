@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Cormorant_Garamond, Manrope } from 'next/font/google'
 import './globals.css'
 import { SiteHeader } from '@/components/ui/site-header'
+import { SmoothScrollProvider } from '@/components/animations/SmoothScrollProvider'
 
 const editorial = Cormorant_Garamond({
   subsets: ['latin'],
@@ -25,8 +26,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${editorial.variable} ${geometric.variable}`}>
       <body>
-        <SiteHeader />
-        <main>{children}</main>
+        <SmoothScrollProvider>
+          <SiteHeader />
+          <main>{children}</main>
+        </SmoothScrollProvider>
       </body>
     </html>
   )
