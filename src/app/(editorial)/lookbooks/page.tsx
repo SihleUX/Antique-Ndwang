@@ -1,0 +1,5 @@
+import Link from 'next/link'
+
+export default function LookbooksPage() {
+  return <div className="px-6 pb-20 pt-14 md:px-12 md:pt-20"><p className="text-[9px] uppercase tracking-[.22em] text-stone">Visual notes from the studio</p><h1 className="mt-5 font-display text-6xl tracking-[-.04em] md:text-8xl">Lookbooks</h1><div className="mt-12 grid gap-8 md:mt-16 md:grid-cols-[1.2fr_.8fr]"><Link href="/collections/first-form" className="group"><div className="aspect-[4/5] overflow-hidden bg-[#b1a99e]"><div className="h-full bg-[url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1400&q=85')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" /></div><p className="mt-4 text-[9px] uppercase tracking-[.18em] text-stone">Spring / Summer 2025</p><h2 className="mt-2 font-display text-4xl">The shape of becoming</h2></Link><div className="flex flex-col justify-end pb-3 md:pl-10"><p className="font-display text-4xl leading-tight">“A silhouette is a feeling before it is a form.”</p><p className="mt-5 text-[9px] uppercase tracking-[.18em] text-stone">Studio notes · 01</p></div></div></div>
+}
