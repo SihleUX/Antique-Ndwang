@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Manrope } from 'next/font/google'
 import './globals.css'
 import { SiteHeader } from '@/components/ui/site-header'
 import { SmoothScrollProvider } from '@/components/animations/SmoothScrollProvider'
+import { CustomCursor } from '@/components/ui/custom-cursor'
 
 const editorial = Cormorant_Garamond({
   subsets: ['latin'],
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <SmoothScrollProvider>
           <SiteHeader />
           <main>{children}</main>
+          <CustomCursor />
         </SmoothScrollProvider>
       </body>
     </html>
